@@ -1,0 +1,20 @@
+<h2>Ng-Class</h2>
+
+<p [class.cor-fundo]="true">Usando class binding, [class.cor-fundo]="true"</p>
+
+<p [class.cor-fundo]="isAdicionarClasseCss">Usando class binding, [class.cor-fundo]="isAdicionarClasseCss"</p>
+<button (click)="atualizarElementos()">Atualizar Componentes</button>
+
+<p [ngClass]="{'cor-fundo': true}">Usando ngClass declarando a classe CSS no template</p>
+
+<p [class.cor-fundo]="isAdicionarClasseCss" [class.cor-letra]="isAdicionarClasseCss"
+    [class.estilo-letra]="isAdicionarClasseCss" [class.borda-paragrafo]="isAdicionarClasseCss">
+  Usando class binding com várias classes CSS
+</p>
+
+<p [ngClass]="{'cor-fundo': isAdicionarClasseCss, 'estilo-letra': isAdicionarClasseCss,
+    'cor-letra': isAdicionarClasseCss, 'borda-paragrafo': isAdicionarClasseCss}">
+  Usando ng Class com várias classes CSS
+</p>
+
+<p [ngClass]="getClassesCss()">Usando ngClass com método na classe do componente</p>

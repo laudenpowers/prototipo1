@@ -1,0 +1,9 @@
+<h2>Listagem de Pessoas</h2>
+<input type="text" [(ngModel)]="nome">
+<p>{{nome}}</p>
+<button (click)="adicionarNome()">Inserir</button>
+<ul>
+  <li *ngFor="let nome of nomes">
+    {{nome}}
+  </li>
+</ul>

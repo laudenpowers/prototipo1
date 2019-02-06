@@ -1,0 +1,5 @@
+<h2>Property Binding</h2>
+<button (click)="atualizarParagrafo()">Atualizar Parágrafo</button>
+<p [hidden]="!isShowParagrafo">Paragráfo Habilitado</p>
+<p bind-hidden="!isShowParagrafo">Habilitado com bind</p>
+<p hidden="!isShowParagrafo">Bind zuado</p>

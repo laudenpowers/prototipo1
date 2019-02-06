@@ -1,0 +1,24 @@
+<h2>Event Binding</h2>
+
+<button (click)="processarClique()">Processar Clique</button>
+
+<input type="text" (keyup)="processarTeclaDigitada($event)">
+
+<input type="text" #valorDigitado (keyup)="processarTeclaPressionada(valorDigitado.value)">
+
+<h3>Evento keyup para validação de senha</h3>
+
+<input type="password" #senhaDigitada (keyup)="validarSenhaPor(senhaDigitada.value)">
+
+<button [disabled]="!isHabilitarBotao" (click)="gravarSenha(senhaDigitada.value)">Salvar Senha</button>
+
+<h3>Evento [keyup.enter] para adicionar na lista</h3>
+<input type="text" #conteudo (keyup.enter)="adicionar(conteudo.value); conteudo.value = ''">
+
+<ul>
+  <li *ngFor="let nome of nomes">{{ nome }}</li>
+</ul>
+
+<h3>Evento (blur)</h3>
+<input type="text" #dataDeNascimento (blur)="verIdade(dataDeNascimento.value)">
+<p>Você possui {{idade}} anos de idade</p>

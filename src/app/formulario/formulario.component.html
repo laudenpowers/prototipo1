@@ -1,0 +1,40 @@
+<h2>Cadastro de Contato</h2>
+
+<form #frmContato="ngForm" (ngSubmit)="salvar()">
+
+  <p>
+    <label for="edtNome">Nome</label>
+    <input type="text" id="edtNome" name="edtNome" #edtNome="ngModel" 
+        [(ngModel)]="contato.nome" required>
+  </p>
+  <div [hidden]="edtNome.valid || edtNome.pristine">
+    <p>O nome é obrigatório</p>
+  </div>    
+  <div ngModelGroup="meios" #meios="ngModelGroup">
+    <p>
+      <label for="edtTelefone">Telefone</label>
+      <input type="text" id="edtTelefone" name="edtTelefone" #edtTelefone="ngModel" 
+          [(ngModel)]="contato.telefone" required>   
+    </p>
+    <div *ngIf="edtNome.invalid && edtNome.dirty">
+      <p>O número do telefone é obrigatório</p>
+    </div>  
+
+    <p>
+      <label for="edtEmail">E-mail</label>
+      <input type="text" id="edtEmail" name="edtEmail" #edtEmail="ngModel" 
+          [(ngModel)]="contato.email">
+    </p>
+    <div [hidden]="edtEmail.pristine">      
+      <p>O conteúdo foi mudado</p>
+    </div>
+    <div *ngIf="edtEmail.touched">
+      <p>Clicou fora do campo</p>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="frmContato.form.invalid">Salvar</button>
+
+</form>
+<p>{{ meios }}</p>
+<p>{{ meios.value | json }}</p>

@@ -1,0 +1,15 @@
+<h2>Input de parâmetros em componente</h2>
+
+<ul>
+  <li *ngFor="let param of parametros">
+    {{ param }}
+  </li>
+</ul>
+
+<h2>Output de parâmetros em componente</h2>
+
+<ul>
+  <a href="#" *ngFor="let param of parametros" (click)="enviarParametro(param)">
+    <li>{{ param }}</li>
+  </a>
+</ul>

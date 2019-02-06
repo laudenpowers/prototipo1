@@ -1,0 +1,25 @@
+<h2>*ngIf</h2>
+
+<button (click)="mostrar()">Exibir nome da escola de treinamentos</button>
+
+<br/>
+
+<p *ngIf="getValor()">Treinamentos com a condicional *ngIf</p>
+
+<div *ngIf="true">
+  *ngIf verdadeiro
+</div>
+
+<div *ngIf="false">
+  *ngIf falso
+</div>
+
+<p *ngIf="cursos.length == 0">Não temos curso disponível</p>
+
+<p *ngIf="cursos.length > 0">Agora temos um curso cadastrado</p>
+
+<button (click)="adicionarCurso()">Adicionar Novo Curso</button>
+
+<p *ngIf="isShowNome">Com uma variável</p>
+
+<p [hidden]="getValor()">Parágrafo com hidden</p>

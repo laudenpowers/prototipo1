@@ -1,0 +1,35 @@
+<h2>Ng Style</h2>
+
+<p [style.font-size]="30 + 'px'">Valor fixo na tela</p>
+
+<p [style.font-size]="tamanhoFonte">Método da classe componente sendo referenciado no template</p>
+
+<button (click)="aumentarFonte()">Aumentar Fonte</button>
+
+<p [style.font-size]="tamanhoFonte">Parágrafo com fonte aumentada</p>
+
+<button (click)="atualizarFonte()">Mudar Fonte</button>
+
+<button (click)="atualizarCor()">Mudar Cor</button>
+
+<p [style.font-size]="isAumentarFonte ? 'x-large' : 'smaller'"
+        [style.color]="isAlterarCor ? 'red' : 'blue'">
+    Mudando aparência com operador ternário
+</p>
+
+<h3>Exercício</h3>
+
+<p [ngStyle]="{'font-size': '30px'}">Valor fixo na tela</p>
+
+<p [ngStyle]="{'font-size': tamanhoFonte}">Método da classe component referenciado no template</p>
+
+<button (click)="aumentarFonte()">Aumentar Fonte</button>
+
+<p [ngStyle]="{'font-size': isAumentarFonte ? 'x-large' : 'smaller',
+               'color': isAlterarCor ? 'red' : 'blue'}">
+    Mudar valor com condição ternária
+</p>
+
+<button (click)="atualizarFonte()">Atualizar Fonte</button>
+
+<button (click)="atualizarCor()">Atualizar Cor</button>
