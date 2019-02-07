@@ -2,23 +2,23 @@
 
   <label>Nome</label>
   <input type="text" formControlName="nome"><br/>
-  <p *ngIf="isCampoInvalido('nome')">O nome é obrigatório</p>
+  <p *ngIf="isCampoInvalido('nome')">O nome é obrigatório*</p>
 
   <label>CPF</label>
   <input type="text" formControlName="cpf"><br/>
-  <p *ngIf="isCampoInvalido('cpf')">O cpf é obrigatório</p>
+  <p *ngIf="isCampoInvalido('cpf')">O cpf é obrigatório*</p>
 
   <label>RG</label>
   <input type="text" formControlName="rg"><br/>
-  <p *ngIf="isCampoInvalido('rg')">O rg é obrigatório</p>
+  <p *ngIf="isCampoInvalido('rg')">O rg é obrigatório*</p>
 
   <label>E-mail</label>
   <input type="text" formControlName="email"><br/>
-  <p *ngIf="isCampoInvalido('email')">O e-mail é obrigatório</p>
+  <p *ngIf="isCampoInvalido('email')">O e-mail é obrigatório*</p>
 
   <div formGroupName="cidade" novalidate>
 
-    <label>Código da Cidade</label>
+    <label>Código da Cidade*</label>
     <input type="text" formControlName="codigo"><br/>
     <p *ngIf="isCampoInvalido('cidade.codigo')">O codigo da cidade é obrigatório</p>
 
