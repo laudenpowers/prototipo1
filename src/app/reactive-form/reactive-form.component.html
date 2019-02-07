@@ -1,6 +1,6 @@
 <form [formGroup]="frmPessoa" (ngSubmit)="salvar()" novalidate>
 
-  <label>Nome*</label>
+  <label>Nome**</label>
   <input type="text" formControlName="nome"><br/>
   <p *ngIf="isCampoInvalido('nome')">O nome é obrigatório**</p>
 
